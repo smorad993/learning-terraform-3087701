@@ -1,9 +1,10 @@
 data "aws_ami" "app_ami" {
   most_recent = true
+  owner       =["amazon"]
 
   filter {
     name   = "name"
-    values = ["bitnami-tomcat-*-x86_64-hvm-ebs-nami"]
+    values = ["amzn2-ami-hvm-*-x86_64-gp2"]
   }
 
   filter {
